@@ -4,7 +4,7 @@ class purchase
       carrito= Array.new
      end
      def add (p)
-         carrito[carrito.length]=p
+         carrito[]=p
      end
      def delete
      end
