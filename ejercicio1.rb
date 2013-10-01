@@ -90,33 +90,13 @@ end
 class Tiburon < Peces
    include Animal
 end
-#probando las clases 
-p = Perro.new
-p.ladra
-p.camina
+# casos de prueba
 h = Hombre.new
 h.habla
 h.camina
-h.nada
-ballena = Ballena.new
-ballena.nada
-ping = Pinguino.new
-ping.camina
-ping.nada
 a = Aguila.new
 a.volar
-a.camina
-coco = Cocodrilo.new
-coco.camina
-coco.nada
-b = Boa.new
-b.presiona
-b.desplazarse
-c = Cobra.new
-c.muerde
-c.desplazarse
 s = Sapo.new
 s.saltar
-s.nada
-tib = Tiburon.new
-tiburon.nada
+p = Perro.new
+p.vuela
