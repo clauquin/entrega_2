@@ -13,12 +13,14 @@ class Purchase
      def total
          @total=@carrito.inject(0) {| sum, producto| sum + producto.precio}
      end
-     def apply_discount
+     def apply_discount (producto)
           @carrito.apply_discount do |purchase|
-               hammers = purchase.products.collect { |product| product.code == yield }
-          purchase.total -= purchase.total * 0.1 if hammers.any?
-  end
-     end       
+               iguales = @carrito.collect { |product| product.code ==  producto.code}
+          @carrito.total -= {iguales.length / 3} * producto.precio if hammers.any?
+          cantidad = @carrito.each { |product, sum| sum++ }
+          purchase.total -= purchase.total * 0.2 if cantidad > 10?
+      end
+end       
 
 
 p1 = Product.new '01', 'Martillo', '50'
